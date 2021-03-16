@@ -2,10 +2,10 @@ function personajes(){
     
     let program = document.getElementById("capturar").value
 
-    let url =`https://rickandmortyapi.com/api/character/${parseInt(program)}`
+    let url =`https://rickandmortyapi.com/api/character/`
 
 
-     for (i = 1; i  <= parseInt(program) ;i++) {
+     for (let i = 1; i  <= parseInt(program) ;i++) {
       
         fetch(`${url}${i}`)
         .then(res => res.json())
@@ -21,7 +21,7 @@ function personajes(){
          </div>`
 
          
-           document.getElementById("capturar").value += component
+           
            document.getElementById("consume").innerHTML += component
            
         })
